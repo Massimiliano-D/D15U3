@@ -231,6 +231,18 @@ const onlyLetters = function (str) {
 };
 console.log(onlyLetters("I have 4 dogs"));
 
+//_________________________________________________________________________________________
+console.log("ES.5 PER FAR CONTENTO STEFANO");
+function onlyLetters2(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (isNaN(parseInt(str[i]))) {
+      result += str[i];
+    }
+  }
+  return result;
+}
+console.log(onlyLetters2("S0LO PER T3!"));
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
@@ -280,7 +292,7 @@ console.log(whatDayIsIt());
       values: [3, 3, 4]
   }
 */
-
+console.log("ES.8");
 function rollTheDices(numero) {
   let somma = 0;
   let risultati = [];
@@ -307,6 +319,7 @@ console.log(rollTheDices(3));
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+console.log("ES.9");
 const howManyDays = function (data) {
   let dataIniziale = new Date(data);
   let dataCorrente = new Date();
@@ -322,6 +335,7 @@ console.log(howManyDays("1996-06-22"));
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+console.log("ES.10");
 function isTodayMyBirthday(compleanno) {
   let oggi = new Date();
   let compleannoDate = new Date(compleanno);
@@ -344,6 +358,7 @@ console.log(isTodayMyBirthday(compleanno));
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+console.log("ES.11");
 const deleteProp = function (obj, string) {
   delete obj[string];
   return obj;
@@ -358,6 +373,7 @@ console.log(deleteProp(Pippo, "età"));
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+console.log("ES.12");
 const newestMovie = function (movies) {
   let filmPiuRecente = null;
 
@@ -378,6 +394,7 @@ console.log(newestMovie(movies));
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+console.log("ES.13");
 let countMovies = function (movies) {
   return movies.length;
 };
@@ -386,7 +403,7 @@ console.log(countMovies(movies));
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
-
+console.log("ES.14");
 function onlyTheYears(movies) {
   let years = movies.map(function (movie) {
     return movie.Year;
@@ -398,6 +415,7 @@ console.log(onlyTheYears(movies));
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+console.log("ES.15");
 function onlyInLastMillennium(movies) {
   let lastMillenniumMovies = movies.filter(function (movie) {
     let year = parseInt(movie.Year);
@@ -411,6 +429,7 @@ console.log(onlyInLastMillennium(movies));
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+console.log("ES.16");
 function sumAllTheYears(movies) {
   let sum = 0;
 
@@ -427,6 +446,7 @@ console.log(sumAllTheYears(movies));
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+console.log("ES.17");
 function searchByTitle(keyword) {
   let results = [];
 
@@ -447,6 +467,7 @@ console.log(searchByTitle("Lord"));
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+console.log("ES.18");
 function searchAndDivide(keyword) {
   let match = [];
   let unmatch = [];
@@ -471,6 +492,7 @@ console.log(searchAndDivide("Lord"));
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+console.log("ES.19");
 function removeIndex(index) {
   let moviesCopy = [...movies];
   moviesCopy.splice(index, 1);
@@ -574,6 +596,7 @@ console.log(removeIndex(2));
   *****
 
 */
+console.log("ES.28");
 const tree = (num) => {
   for (let i = 0; i < num; i++) {
     let star = "";
